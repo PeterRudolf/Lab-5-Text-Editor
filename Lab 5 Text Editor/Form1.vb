@@ -60,4 +60,8 @@ Public Class frmTextEditor
             Console.WriteLine(ex.ToString)
         End Try
     End Sub
+
+    Private Sub HelpToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles HelpToolStripMenuItem.Click
+
+    End Sub
 End Class

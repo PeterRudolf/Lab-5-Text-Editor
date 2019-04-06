@@ -38,13 +38,13 @@ Partial Class frmTextEditor
         Me.SaveFileDialog1 = New System.Windows.Forms.SaveFileDialog()
         Me.txtDisplay = New System.Windows.Forms.TextBox()
         Me.hover = New System.Windows.Forms.ToolTip(Me.components)
-        Me.AboutToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.HelpToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
         'MenuStrip1
         '
-        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FileToolStripMenuItem, Me.CloseToolStripMenuItem, Me.EditToolStripMenuItem, Me.AboutToolStripMenuItem})
+        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FileToolStripMenuItem, Me.CloseToolStripMenuItem, Me.EditToolStripMenuItem, Me.HelpToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
         Me.MenuStrip1.Size = New System.Drawing.Size(423, 24)
@@ -105,7 +105,7 @@ Partial Class frmTextEditor
         '
         Me.CutToolStripMenuItem.Name = "CutToolStripMenuItem"
         Me.CutToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.X), System.Windows.Forms.Keys)
-        Me.CutToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.CutToolStripMenuItem.Size = New System.Drawing.Size(144, 22)
         Me.CutToolStripMenuItem.Text = "Cu&t"
         Me.CutToolStripMenuItem.ToolTipText = "Removes the selected text and copies it to the clipboard"
         '
@@ -113,7 +113,7 @@ Partial Class frmTextEditor
         '
         Me.CopyToolStripMenuItem.Name = "CopyToolStripMenuItem"
         Me.CopyToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.C), System.Windows.Forms.Keys)
-        Me.CopyToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.CopyToolStripMenuItem.Size = New System.Drawing.Size(144, 22)
         Me.CopyToolStripMenuItem.Text = "C&opy"
         Me.CopyToolStripMenuItem.ToolTipText = "Copies the selected text to the clipboard"
         '
@@ -121,7 +121,7 @@ Partial Class frmTextEditor
         '
         Me.PasteToolStripMenuItem.Name = "PasteToolStripMenuItem"
         Me.PasteToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.V), System.Windows.Forms.Keys)
-        Me.PasteToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.PasteToolStripMenuItem.Size = New System.Drawing.Size(144, 22)
         Me.PasteToolStripMenuItem.Text = "&Paste"
         Me.PasteToolStripMenuItem.ToolTipText = "Pastes the current clipboard text on the selected line"
         '
@@ -139,11 +139,11 @@ Partial Class frmTextEditor
         Me.txtDisplay.TabIndex = 1
         Me.hover.SetToolTip(Me.txtDisplay, "Enables the user to write and edit text.")
         '
-        'AboutToolStripMenuItem
+        'HelpToolStripMenuItem
         '
-        Me.AboutToolStripMenuItem.Name = "AboutToolStripMenuItem"
-        Me.AboutToolStripMenuItem.Size = New System.Drawing.Size(44, 20)
-        Me.AboutToolStripMenuItem.Text = "&Help"
+        Me.HelpToolStripMenuItem.Name = "HelpToolStripMenuItem"
+        Me.HelpToolStripMenuItem.Size = New System.Drawing.Size(44, 20)
+        Me.HelpToolStripMenuItem.Text = "&Help"
         '
         'frmTextEditor
         '
@@ -154,6 +154,7 @@ Partial Class frmTextEditor
         Me.Controls.Add(Me.MenuStrip1)
         Me.MainMenuStrip = Me.MenuStrip1
         Me.Name = "frmTextEditor"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Text Editor"
         Me.MenuStrip1.ResumeLayout(False)
         Me.MenuStrip1.PerformLayout()
@@ -177,5 +178,5 @@ Partial Class frmTextEditor
     Friend WithEvents PasteToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents hover As ToolTip
     Friend WithEvents SaveToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents AboutToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents HelpToolStripMenuItem As ToolStripMenuItem
 End Class
